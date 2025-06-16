@@ -10,7 +10,8 @@ class Redis(Chart):
         Helm(
             self,
             "redis",
-            chart="bitnami/redis",
+            chart="redis",
+            repo="https://charts.bitnami.com/bitnami",
             version="17.9.2",
             values={"auth": {"password": "sdweqweq"}, "sentinel": {"enabled": True}},
         )
